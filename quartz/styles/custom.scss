@@ -1,3 +1,31 @@
-@use "./base.scss";
+// === HOMEPAGE HERO ===
+// Применяется только к article на главной странице
+.page-listing,
+article.popover-hint {
 
-// put your custom CSS here!
+  // Крупный заголовок страницы
+  & > h1:first-child {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 0.5rem;
+  }
+
+  // Блок-цитата как hero-описание
+  blockquote {
+    background: var(--highlight);
+    border-left: 4px solid var(--secondary);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    font-size: 1.05rem;
+    color: var(--darkgray);
+  }
+}
+
+// === BACKLINKS / GRAPH на главной — чуть больше отступ ===
+.graph-outer {
+  margin-top: 1.5rem;
+}
