@@ -35,6 +35,7 @@ blockquote > p:first-child {
   margin-bottom: 0.5rem;
 }
 
+/* Иконки */
 .callout[data-callout="abstract"] .callout-title::before { content: "📄"; }
 .callout[data-callout="info"] .callout-title::before { content: "ℹ️"; }
 .callout[data-callout="tip"] .callout-title::before { content: "💡"; }
@@ -47,6 +48,9 @@ blockquote > p:first-child {
 .callout[data-callout="error"] .callout-title::before { content: "🚫"; }
 .callout[data-callout="example"] .callout-title::before { content: "📋"; }
 .callout[data-callout="quote"] .callout-title::before { content: "💬"; }
+
+/* === ЦВЕТА ДЛЯ CALLOUT === */
+/* (вставь код цветов отсюда) */
 
 body.dark .callout,
 body.dark blockquote {
