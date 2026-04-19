@@ -1,74 +1,27 @@
-/* Кастомные шрифты */
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&family=Forum&display=swap');
+/* === ШРИФТЫ: @import ВСЕГДА в начале! === */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
 
-/* Если Circe, Gilroy, Proxima Nova есть локально — укажи пути */
-/* Или загрузи их через CDN */
-
-/* Интерфейс */
-html {
-  --font-interface: 'Mulish', 'Forum', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-text: 'Circe', 'Gilroy', 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+/* === Переменные шрифтов === */
+:root {
+  --font-header: 'Mulish', 'Forum', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Mulish', 'Circe', 'Gilroy', 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-code: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
-body {
-  font-family: var(--font-text);
-}
-
+/* === Применение шрифтов === */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-interface);
+  font-family: var(--font-header) !important;
+}
+
+body, p, li, a, blockquote {
+  font-family: var(--font-body) !important;
 }
 
 code, pre, kbd {
-  font-family: var(--font-mono);
-}
-// === HOMEPAGE HERO ===
-// Применяется только к article на главной странице
-.page-listing,
-article.popover-hint {
-
-  // Крупный заголовок страницы
-  & > h1:first-child {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 700;
-    line-height: 1.15;
-    margin-bottom: 0.5rem;
-    border-bottom: 2px solid var(--secondary);
-    padding-bottom: 0.5rem;
-  }
-
-  // Блок-цитата как hero-описание
-  blockquote {
-    background: var(--highlight);
-    border-left: 4px solid var(--secondary);
-    border-radius: 6px;
-    padding: 1rem 1.25rem;
-    margin: 1.5rem 0;
-    font-size: 1.05rem;
-    color: var(--darkgray);
-  }
+  font-family: var(--font-code) !important;
 }
 
-// === BACKLINKS / GRAPH на главной — чуть больше отступ ===
-.graph-outer {
-  margin-top: 1.5rem;
-}
-/* Улучшения для мобильных */
-@media (max-width: 768px) {
-  .page-listing {
-    padding: 1rem;
-  }
-  
-  article {
-    padding: 1rem;
-  }
-  
-  /* Увеличь шрифт для чтения */
-  body {
-    font-size: 16px;
-  }
-}
-/* Callout как в Obsidian */
+/* === Callout как в Obsidian === */
 .callout,
 blockquote {
   background: var(--highlight);
@@ -86,18 +39,39 @@ blockquote > p:first-child {
   font-weight: 600;
   color: var(--secondary);
   margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
-/* Иконки для типов callout */
+/* === ИКОНКИ ДЛЯ CALLOUT === */
+.callout[data-callout="missing"] .callout-title::before { content: "❌"; }
+.callout[data-callout="attention"] .callout-title::before { content: "⚠️"; }
+.callout[data-callout="error"] .callout-title::before { content: "🚫"; }
+.callout[data-callout="important"] .callout-title::before { content: "🔖"; }
 .callout[data-callout="abstract"] .callout-title::before { content: "📄"; }
+.callout[data-callout="bug"] .callout-title::before { content: "🐛"; }
+.callout[data-callout="caution"] .callout-title::before { content: "⚠️"; }
+.callout[data-callout="check"] .callout-title::before { content: "✅"; }
+.callout[data-callout="cite"] .callout-title::before { content: "📖"; }
+.callout[data-callout="danger"] .callout-title::before { content: "⚡"; }
+.callout[data-callout="default"] .callout-title::before { content: "📝"; }
+.callout[data-callout="done"] .callout-title::before { content: "✔️"; }
+.callout[data-callout="example"] .callout-title::before { content: "📋"; }
+.callout[data-callout="fail"] .callout-title::before { content: "❌"; }
+.callout[data-callout="failure"] .callout-title::before { content: "✖️"; }
+.callout[data-callout="faq"] .callout-title::before { content: "❓"; }
+.callout[data-callout="help"] .callout-title::before { content: "🆘"; }
+.callout[data-callout="hint"] .callout-title::before { content: "💡"; }
 .callout[data-callout="info"] .callout-title::before { content: "ℹ️"; }
-.callout[data-callout="note"] .callout-title::before { content: "📝"; }
+.callout[data-callout="note"] .callout-title::before { content: "📌"; }
+.callout[data-callout="question"] .callout-title::before { content: "❔"; }
+.callout[data-callout="quote"] .callout-title::before { content: "💬"; }
+.callout[data-callout="success"] .callout-title::before { content: "✅"; }
+.callout[data-callout="summary"] .callout-title::before { content: "📝"; }
 .callout[data-callout="tip"] .callout-title::before { content: "💡"; }
+.callout[data-callout="tldr"] .callout-title::before { content: "📄"; }
+.callout[data-callout="todo"] .callout-title::before { content: "☑️"; }
+.callout[data-callout="warning"] .callout-title::before { content: "⚠️"; }
 
-/* Тёмная тема */
+/* === Тёмная тема === */
 body.dark {
   .callout,
   blockquote {
@@ -106,12 +80,15 @@ body.dark {
   }
 }
 
-/* Мобильная адаптация */
+/* === Мобильная адаптация === */
 @media (max-width: 768px) {
   article {
     padding: 1rem;
   }
   .callout {
     padding: 0.875rem 1rem;
+  }
+  h1 {
+    font-size: 1.75rem !important;
   }
 }
