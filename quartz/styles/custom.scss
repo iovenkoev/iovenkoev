@@ -50,16 +50,119 @@ blockquote > p:first-child {
 .callout[data-callout="quote"] .callout-title::before { content: "💬"; }
 
 /* === ЦВЕТА ДЛЯ CALLOUT === */
-/* (вставь код цветов отсюда) */
 
-body.dark .callout,
-body.dark blockquote {
-  background: rgba(143, 159, 169, 0.15);
-  color: var(--lightgray);
+/* Abstract - серый */
+.callout[data-callout="abstract"] {
+  background: #f0f4f8;
+  border-left-color: #8f9fa9;
+}
+.callout[data-callout="abstract"] .callout-title {
+  color: #8f9fa9;
 }
 
-@media (max-width: 768px) {
-  article { padding: 1rem; }
-  .callout { padding: 0.875rem 1rem; }
-  h1 { font-size: 1.75rem !important; }
+/* Info - синий */
+.callout[data-callout="info"] {
+  background: #e7f3ff;
+  border-left-color: #0066cc;
+}
+.callout[data-callout="info"] .callout-title {
+  color: #0066cc;
+}
+
+/* Tip/Hint - бирюзовый */
+.callout[data-callout="tip"],
+.callout[data-callout="hint"] {
+  background: #e3fffa;
+  border-left-color: #00a896;
+}
+.callout[data-callout="tip"] .callout-title,
+.callout[data-callout="hint"] .callout-title {
+  color: #00a896;
+}
+
+/* Warning/Attention/Caution - оранжевый */
+.callout[data-callout="warning"],
+.callout[data-callout="attention"],
+.callout[data-callout="caution"] {
+  background: #fff5e6;
+  border-left-color: #ff8800;
+}
+.callout[data-callout="warning"] .callout-title,
+.callout[data-callout="attention"] .callout-title,
+.callout[data-callout="caution"] .callout-title {
+  color: #ff8800;
+}
+
+/* Error/Bug/Danger - красный */
+.callout[data-callout="error"],
+.callout[data-callout="bug"],
+.callout[data-callout="danger"] {
+  background: #ffe6e6;
+  border-left-color: #cc0000;
+}
+.callout[data-callout="error"] .callout-title,
+.callout[data-callout="bug"] .callout-title,
+.callout[data-callout="danger"] .callout-title {
+  color: #cc0000;
+}
+
+/* Success/Done/Check - зелёный */
+.callout[data-callout="success"],
+.callout[data-callout="done"],
+.callout[data-callout="check"] {
+  background: #e6fff0;
+  border-left-color: #00aa44;
+}
+.callout[data-callout="success"] .callout-title,
+.callout[data-callout="done"] .callout-title,
+.callout[data-callout="check"] .callout-title {
+  color: #00aa44;
+}
+
+/* Question/Faq - фиолетовый/оранжевый */
+.callout[data-callout="question"],
+.callout[data-callout="faq"] {
+  background: #fff0e6;
+  border-left-color: #cc6600;
+}
+.callout[data-callout="question"] .callout-title,
+.callout[data-callout="faq"] .callout-title {
+  color: #cc6600;
+}
+
+/* Example - жёлтый */
+.callout[data-callout="example"] {
+  background: #fffbe6;
+  border-left-color: #ffcc00;
+}
+.callout[data-callout="example"] .callout-title {
+  color: #ffcc00;
+}
+
+/* Quote - нейтральный серый */
+.callout[data-callout="quote"] {
+  background: #f5f5f5;
+  border-left-color: #999999;
+  font-style: italic;
+}
+.callout[data-callout="quote"] .callout-title {
+  color: #999999;
+}
+
+/* Note - голубой */
+.callout[data-callout="note"] {
+  background: #e6f3ff;
+  border-left-color: #0066ff;
+}
+.callout[data-callout="note"] .callout-title {
+  color: #0066ff;
+}
+
+/* Todo - розовый */
+.callout[data-callout="todo"] {
+  background: #ffe6f0;
+  border-left-color: #cc3366;
+}
+.callout[data-callout="todo"] .callout-title {
+  color: #cc3366;
 }
