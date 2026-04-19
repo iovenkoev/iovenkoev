@@ -17,11 +17,11 @@ const config: QuartzConfig = {
     theme: {
       fontOrigin: "googleFonts", // Inter подгрузится автоматически
       cdnCaching: true,
-      typography: {
-        header: "Inter",
-        body: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif",
-        code: "'JetBrains Mono', 'Fira Code', 'IBM Plex Mono', monospace",
-      },
+     typography: {
+  header: "Mulish",
+  body: "Mulish", 
+  code: "JetBrains Mono",
+},
       colors: {
         lightMode: {
           light: "#faf8f8",
