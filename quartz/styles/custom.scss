@@ -44,3 +44,50 @@ article.popover-hint {
     font-size: 16px;
   }
 }
+/* Callout как в Obsidian */
+.callout,
+blockquote {
+  background: var(--highlight);
+  border-left: 4px solid var(--secondary);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--darkgray);
+}
+
+.callout-title,
+blockquote > p:first-child {
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Иконки для типов callout */
+.callout[data-callout="abstract"] .callout-title::before { content: "📄"; }
+.callout[data-callout="info"] .callout-title::before { content: "ℹ️"; }
+.callout[data-callout="note"] .callout-title::before { content: "📝"; }
+.callout[data-callout="tip"] .callout-title::before { content: "💡"; }
+
+/* Тёмная тема */
+body.dark {
+  .callout,
+  blockquote {
+    background: rgba(143, 159, 169, 0.15);
+    color: var(--lightgray);
+  }
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  article {
+    padding: 1rem;
+  }
+  .callout {
+    padding: 0.875rem 1rem;
+  }
+}
