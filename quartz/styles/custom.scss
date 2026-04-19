@@ -1,3 +1,27 @@
+/* Кастомные шрифты */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&family=Forum&display=swap');
+
+/* Если Circe, Gilroy, Proxima Nova есть локально — укажи пути */
+/* Или загрузи их через CDN */
+
+/* Интерфейс */
+html {
+  --font-interface: 'Mulish', 'Forum', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-text: 'Circe', 'Gilroy', 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+body {
+  font-family: var(--font-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-interface);
+}
+
+code, pre, kbd {
+  font-family: var(--font-mono);
+}
 // === HOMEPAGE HERO ===
 // Применяется только к article на главной странице
 .page-listing,
