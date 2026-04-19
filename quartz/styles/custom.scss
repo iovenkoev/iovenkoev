@@ -29,3 +29,18 @@ article.popover-hint {
 .graph-outer {
   margin-top: 1.5rem;
 }
+/* Улучшения для мобильных */
+@media (max-width: 768px) {
+  .page-listing {
+    padding: 1rem;
+  }
+  
+  article {
+    padding: 1rem;
+  }
+  
+  /* Увеличь шрифт для чтения */
+  body {
+    font-size: 16px;
+  }
+}
